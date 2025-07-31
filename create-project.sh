@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Configuration
-TEMPLATE_REPO="https://github.com/user/template-repo.git"
+TEMPLATE_REPO="https://github.com/TrueSoftwareNL/TSProjectTemplate.git"
 
 # Ask for project name
 read -rp "Enter a name for your new project: " PROJECT_NAME
