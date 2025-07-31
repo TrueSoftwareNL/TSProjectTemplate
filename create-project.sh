@@ -24,11 +24,15 @@ git clone --depth 1 "$TEMPLATE_REPO" "$PROJECT_NAME" || exit 1
 # Remove original Git history
 cd "$PROJECT_NAME" || exit 1
 rm -rf .git
+rm ./create-project.sh || exit 1
 
 # Reinitialize Git
 echo "🔧 Initializing new Git repository..."
 git init
 git add .
 git commit -m "Initial commit from template"
+
+echo "🔧 Initializing packages..."
+yarn && yarn ncu
 
 echo "✅ Project '$PROJECT_NAME' is ready."
